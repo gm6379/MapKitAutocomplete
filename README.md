@@ -16,7 +16,7 @@ The method below allows you to highlight the user's search string within the tab
   - parameter text: The text to highlight
   - parameter ranges: The ranges where the text should be highlighted
   - parameter size: The size the text should be set at 
-  - returns: A highlighted attributed with the ranges highlighted
+  - returns: A highlighted attributed string with the ranges highlighted
  */
 func highlightedText(_ text: String, inRanges ranges: [NSValue], size: CGFloat) -> NSAttributedString {
     let attributedText = NSMutableAttributedString(string: text)
