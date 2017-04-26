@@ -63,3 +63,19 @@ extension SearchViewController: UITableViewDataSource {
         return cell
     }
 }
+
+extension SearchViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let completion = searchResults[indexPath.row]
+        
+        let searchRequest = MKLocalSearchRequest(completion: completion)
+        let search = MKLocalSearch(request: searchRequest)
+        search.start { (response, error) in
+            let coordinate = response?.mapItems[0].placemark.coordinate
+            print(String(describing: coordinate))
+        }
+    }
+}

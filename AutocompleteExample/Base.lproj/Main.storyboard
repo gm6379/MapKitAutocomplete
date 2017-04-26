@@ -26,6 +26,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Eol-oK-OGj" id="pXA-oK-wLC"/>
+                                    <outlet property="delegate" destination="Eol-oK-OGj" id="4LC-o6-9Pk"/>
                                 </connections>
                             </tableView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Wdw-ab-uxo">
