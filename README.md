@@ -1,4 +1,4 @@
-# MapKitAutocomplete
+# MapKit Autocomplete
 
 A simple example showing Apple MapKit's autocomplete functionality.
 
