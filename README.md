@@ -10,7 +10,7 @@ A simple example showing Apple MapKit's autocomplete functionality.
 
 The method below allows you to highlight the user's search string within the tableView.
 
-```
+```swift
 /**
   Highlights the matching search strings with the results
   - parameter text: The text to highlight
@@ -33,7 +33,7 @@ func highlightedText(_ text: String, inRanges ranges: [NSValue], size: CGFloat) 
 
 All you need to do is slightly modify the ```cellForRowAtIndexPath``` method inside your ```UITableViewDataSource``` to use attributed strings as follows:
 
-```
+```swift
 func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let searchResult = searchResults[indexPath.row]
     let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
