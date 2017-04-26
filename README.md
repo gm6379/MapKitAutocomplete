@@ -8,7 +8,7 @@ A simple example showing Apple MapKit's autocomplete functionality.
 
 ### Highlighting the search query
 
-The method below allows you to highlight the user's search string within the tableView. This gives the user more information about their search results as they are appearing.
+The method below allows you to highlight the user's search string within the table view. This gives the user more information about their search results as they are appearing.
 
 ```swift
 /**
