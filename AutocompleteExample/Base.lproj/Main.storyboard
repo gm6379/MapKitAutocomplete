@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Eol-oK-OGj">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="wcm-Zg-F2r">
+            <objects>
+                <viewController id="Eol-oK-OGj" customClass="SearchViewController" customModule="AutocompleteExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oTq-zb-VK8"/>
+                        <viewControllerLayoutGuide type="bottom" id="dmj-Dj-Exz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="59s-np-OYb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VNL-5q-YL1">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Eol-oK-OGj" id="pXA-oK-wLC"/>
+                                </connections>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Wdw-ab-uxo">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Eol-oK-OGj" id="NyO-60-6u6"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dmj-Dj-Exz" firstAttribute="top" secondItem="VNL-5q-YL1" secondAttribute="bottom" id="Dbm-gf-h8F"/>
+                            <constraint firstItem="VNL-5q-YL1" firstAttribute="top" secondItem="Wdw-ab-uxo" secondAttribute="bottom" id="JJj-O2-loa"/>
+                            <constraint firstItem="VNL-5q-YL1" firstAttribute="leading" secondItem="59s-np-OYb" secondAttribute="leading" id="KSH-jA-zML"/>
+                            <constraint firstItem="Wdw-ab-uxo" firstAttribute="top" secondItem="oTq-zb-VK8" secondAttribute="bottom" id="SJ4-YS-sKT"/>
+                            <constraint firstItem="Wdw-ab-uxo" firstAttribute="leading" secondItem="59s-np-OYb" secondAttribute="leading" id="SLI-1r-gu0"/>
+                            <constraint firstItem="VNL-5q-YL1" firstAttribute="top" secondItem="Wdw-ab-uxo" secondAttribute="bottom" id="e0B-dR-pbn"/>
+                            <constraint firstAttribute="trailing" secondItem="Wdw-ab-uxo" secondAttribute="trailing" id="pjz-hn-Cea"/>
+                            <constraint firstAttribute="trailing" secondItem="VNL-5q-YL1" secondAttribute="trailing" id="vse-oN-I65"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchResultsTableView" destination="VNL-5q-YL1" id="foW-p2-hnA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1dC-en-S83" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+</document>
